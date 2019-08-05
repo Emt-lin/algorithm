@@ -1,4 +1,4 @@
-package acwing;
+package acwing.array;
 
 /**
  * @author psl
