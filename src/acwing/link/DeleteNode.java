@@ -20,7 +20,7 @@ public class DeleteNode {
         node.val = node.next.val;
         node.next = node.next.next;
         //第二种：c++,运用了 解引用 的知识
-        // *node = *(node.next);
+        // *node = *(node->next);
     }
 }
 class _ListNode {
