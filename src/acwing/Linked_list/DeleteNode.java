@@ -1,4 +1,4 @@
-package acwing.link;
+package acwing.Linked_list;
 
 /**
  * @author psl
