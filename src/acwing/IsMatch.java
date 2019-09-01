@@ -12,6 +12,7 @@ package acwing;
  * 输入： s="aa" p="a*"
  * 输出:true
  *          解题思路：
+ *          采用动态规划的思想(用的递归)
  *         状态表示：    f[i][j] 表示s[i,....]和p[j,...]相匹配
  *         状态转移：
  *         1、如果p[j]是正常字符，f[i][j] = s[i] == p[j] && f[i+1][j+1]
@@ -24,6 +25,7 @@ package acwing;
 public class IsMatch {
     int n, m;
     String s, p;
+    //用一个二维数组来表示状态
     boolean[][] f;
     public boolean isMatch(String _s, String _p) {
         s = _s;
@@ -38,7 +40,9 @@ public class IsMatch {
         if (y == m){
             return f[x][y] = x == n;
         }
+        //匹配第一二种情况。。。。
         boolean first_match = x < n && (p.charAt(y) == '.' || p.charAt(y) == s.charAt(x));
+        //当y+1为 * 时，f[i][j]除了枚举0个p[j]之外，其余判断f[i+1][j]是否为真，以及s[i]是否可以和p[j]匹配即可。
         if (y + 1 < m && p.charAt(y + 1) == '*'){
             f[x][y] =  dp(x,y + 2) || first_match && dp(x + 1, y);
         }else {
