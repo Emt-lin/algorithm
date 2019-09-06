@@ -1,0 +1,1 @@
+![EntryNodeOfLoop.java](../../image/linked-list01.png)
