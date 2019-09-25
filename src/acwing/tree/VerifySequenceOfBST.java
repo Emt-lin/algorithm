@@ -13,7 +13,7 @@ package acwing.tree;
  *              解题思路：
  *                  二叉搜索树：先遍历左子树、再右子树，最后根节点。而且所有左子树的所有值小于根节点，右子树大于根节点
  *                  就是利用二叉搜索树的性质进行操作
- *              时间复杂度：O(n)
+ *              时间复杂度：O(n^2)
  */
 public class VerifySequenceOfBST {
     int[] seq ;
