@@ -18,6 +18,7 @@ import java.util.LinkedList;
  *                          （2） c等于 1时，0~def 个1
  *                          （3） c 大于 1时，1000 个1
  *              时间复杂度：O(log^n 的平方)，容易改成O(log^n)，把left，right，t预处理出来，然后用的时候查表
+ *              图片思路： acwing 56.png
  */
 public class NumberOf1Between1AndN_Solution {
     public int numberOf1Between1AndN_Solution(int n) {
